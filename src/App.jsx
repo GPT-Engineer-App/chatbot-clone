@@ -6,6 +6,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Layout from "./layouts/sidebar"; // Use the sidebar layout
 import Index from "./pages/Index.jsx";
 import Chat from "./pages/Chat.jsx"; // Import the Chat page
+import IntakeForm from "./pages/IntakeForm.jsx"; // Import the IntakeForm page
 
 const queryClient = new QueryClient();
 
@@ -32,6 +33,7 @@ const App = () => {
             <Route path="/" element={<Layout />}>
               <Route index element={<Index />} />
               <Route path="chat" element={<Chat />} /> {/* Add the Chat route */}
+              <Route path="intake-form" element={<IntakeForm />} /> {/* Add the IntakeForm route */}
             </Route>
           </Routes>
         </Router>

@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
-import { CircleUser, Menu } from "lucide-react";
+import { CircleUser, Menu, FilePlus } from "lucide-react";
 import logo from "../../public/images/claude-logo.png"; // Import the new logo
 import { NavLink, Outlet } from "react-router-dom";
 import { navItems } from "../App";
@@ -49,6 +49,10 @@ const Sidebar = () => (
               {item.title}
             </SidebarNavLink>
           ))}
+          <SidebarNavLink to="/intake-form">
+            <FilePlus className="h-4 w-4" />
+            Intake Form
+          </SidebarNavLink>
         </nav>
       </div>
     </div>
@@ -77,6 +81,9 @@ const MobileSidebar = () => (
             {item.title}
           </SidebarNavLink>
         ))}
+        <SidebarNavLink to="/intake-form">
+          Intake Form
+        </SidebarNavLink>
       </nav>
     </SheetContent>
   </Sheet>
