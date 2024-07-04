@@ -49,10 +49,7 @@ const Sidebar = () => (
               {item.title}
             </SidebarNavLink>
           ))}
-          <SidebarNavLink to="/intake-form">
-            <FilePlus className="h-4 w-4" />
-            Intake Form
-          </SidebarNavLink>
+          
         </nav>
       </div>
     </div>
@@ -81,9 +78,7 @@ const MobileSidebar = () => (
             {item.title}
           </SidebarNavLink>
         ))}
-        <SidebarNavLink to="/intake-form">
-          Intake Form
-        </SidebarNavLink>
+        
       </nav>
     </SheetContent>
   </Sheet>

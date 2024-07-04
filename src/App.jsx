@@ -14,17 +14,17 @@ export const navItems = [
   {
     title: "Home",
     to: "/",
-    icon: <Home className="h-4 w-4" />,
+    icon: <Home className="h-5 w-5" />,
   },
   {
     title: "Intake Form",
     to: "/intake-form",
-    icon: <FilePlus className="h-4 w-4" />,
+    icon: <FilePlus className="h-5 w-5" />,
   },
   {
     title: "Chat",
     to: "/chat",
-    icon: <MessageSquare className="h-4 w-4" />,
+    icon: <MessageSquare className="h-5 w-5" />,
   },
 ];
 
