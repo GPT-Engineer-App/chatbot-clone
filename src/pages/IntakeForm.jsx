@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { useNavigate } from "react-router-dom";
 import { useDropzone } from "react-dropzone";
 import { toast } from "sonner";
+import { Loader2 } from "lucide-react"; // Import the spinner icon
 
 const IntakeForm = () => {
   const [files, setFiles] = useState([]);
@@ -46,7 +47,11 @@ const IntakeForm = () => {
         <em>(Only PDFs and images will be accepted)</em>
       </div>
       <Button onClick={handleAnalyze} disabled={analyzing}>
-        {analyzing ? "Analyzing..." : "Analyze"}
+        {analyzing ? (
+          <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+        ) : (
+          "Analyze"
+        )}
       </Button>
       {!analyzing && files.length > 0 && (
         <Button onClick={() => navigate("/chat")} className="mt-4">
